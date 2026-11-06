@@ -1,0 +1,2 @@
+# Used by examples/current_drift.py (Python 3.10 or 3.11).
+numpy==1.26.4

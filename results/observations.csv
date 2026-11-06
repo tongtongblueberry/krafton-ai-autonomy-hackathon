@@ -1,0 +1,36 @@
+study,condition,metric,value,unit,scope
+recovery,0% recovery data / all,mean_score,63.71835589855311,score,3 training seeds; 24 starts per seed
+recovery,0% recovery data / all,sd_between_training_seeds,0.28639005570874954,score,3 training seeds; 24 starts per seed
+recovery,0% recovery data / normal start,mean_score,64.74213206117984,score,3 training seeds; 12 starts per seed
+recovery,0% recovery data / normal start,sd_between_training_seeds,0.4869678957890595,score,3 training seeds; 12 starts per seed
+recovery,0% recovery data / recovery start,mean_score,62.694579735926375,score,3 training seeds; 12 starts per seed
+recovery,0% recovery data / recovery start,sd_between_training_seeds,0.6751597184589881,score,3 training seeds; 12 starts per seed
+recovery,50% recovery data / all,mean_score,64.81281064579414,score,3 training seeds; 24 starts per seed
+recovery,50% recovery data / all,sd_between_training_seeds,0.15530085923048192,score,3 training seeds; 24 starts per seed
+recovery,50% recovery data / normal start,mean_score,64.67768936564231,score,3 training seeds; 12 starts per seed
+recovery,50% recovery data / normal start,sd_between_training_seeds,0.14495501815560474,score,3 training seeds; 12 starts per seed
+recovery,50% recovery data / recovery start,mean_score,64.94793192594597,score,3 training seeds; 12 starts per seed
+recovery,50% recovery data / recovery start,sd_between_training_seeds,0.22713277609695523,score,3 training seeds; 12 starts per seed
+recovery,100% recovery data / all,mean_score,64.38154414203672,score,3 training seeds; 24 starts per seed
+recovery,100% recovery data / all,sd_between_training_seeds,0.4085503793665254,score,3 training seeds; 24 starts per seed
+recovery,100% recovery data / normal start,mean_score,64.15515505013705,score,3 training seeds; 12 starts per seed
+recovery,100% recovery data / normal start,sd_between_training_seeds,0.29900021302372815,score,3 training seeds; 12 starts per seed
+recovery,100% recovery data / recovery start,mean_score,64.60793323393638,score,3 training seeds; 12 starts per seed
+recovery,100% recovery data / recovery start,sd_between_training_seeds,0.5207352019454233,score,3 training seeds; 12 starts per seed
+barn,DWA,duration,31.3240,simulated seconds,one completed run; same world and seed
+barn,DWA,benchmark_score,0.2170,score,one completed run; same world and seed
+barn,E-Band,duration,24.1590,simulated seconds,one completed run; same world and seed
+barn,E-Band,benchmark_score,0.2813,score,one completed run; same world and seed
+rlc,voltage,R2,0.9931500338128578,dimensionless,independent test recording; one training seed
+rlc,voltage,RMSE,6.529432356237443,V,independent test recording; one training seed
+rlc,current,R2,0.9710587050939742,dimensionless,independent test recording; one training seed
+rlc,current,RMSE,0.8066452362028789,A,independent test recording; one training seed
+robomimic,learned / 5000 updates,development_successes,0,episodes,10 previously seen development starts
+robomimic,learned / 20000 updates,development_successes,10,episodes,10 previously seen development starts
+robomimic,learned / 50000 updates,development_successes,10,episodes,10 previously seen development starts
+robomimic,trained policy,final_successes,50,episodes,50 paired final starts
+robomimic,published checkpoint,final_successes,47,episodes,50 paired final starts
+planet,random actions,mean_return,133.14750061035156,episode return,5 paired starts; one checkpoint; episode-log aggregation
+planet,CEM planning,mean_return,142.60182495117186,episode return,5 paired starts; one checkpoint; episode-log aggregation
+planet,CEM versus random,higher_return_pairs,2,pairs,5 paired starts
+planet,CEM minus random,median_paired_return_difference,-2.528656005859375,episode return,5 paired starts; episode-log aggregation
