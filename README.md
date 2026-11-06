@@ -1,8 +1,8 @@
 # KRAFTON Autonomy Lab
 
-[KRAFTON AI Autonomy Hackathon](https://kraftonai-autonomy-hackathon.com/)에 참가하며 만든 실험 중, 외부에서도 살펴볼 수 있는 코드와 결과를 모았다. 프로젝트에서는 선박이 장애물을 피해 목적지에 가는 항법, 조종 입력에 따른 움직임 예측, 영상에서 다음 상태와 행동을 추정하는 월드 모델을 다뤘다.
+[KRAFTON AI Autonomy Hackathon](https://kraftonai-autonomy-hackathon.com/)에서 조종 입력으로 배의 궤적을 예측했다. 조종 정책을 학습할 때는 정상 주행 시연만 쓴 경우와 항로를 벗어났다가 복귀하는 시연을 섞은 경우의 성능을 비교했다. 영상 과제에서는 과거 화면과 행동으로 다음 화면의 특징을 예측하는 모델을 구현했다.
 
-**처음이라면 [궤적 오차 예제](examples/README.md#drift)부터 보세요.** 예측한 배의 위치와 관측한 위치가 매초 일정하게 벌어진다면 하나의 속도 차이로 설명할 수 있다. 오차가 시간에 따라 곡선을 그리면 같은 보정을 해도 일부가 남는다. 작은 합성 궤적으로 두 경우를 확인한다. 실제 선박 데이터나 GPU는 필요하지 않다.
+[궤적 오차 예제](examples/README.md#drift)는 세 개의 합성 궤적으로 두 가지 오차를 비교한다. 예측 위치와 관측 위치의 차이가 시간에 비례하면 일정한 속도 차이로 설명할 수 있다. 여기에 사인 곡선 모양의 오차를 더하면 속도 보정 뒤에도 오차가 일부 남는다. Python과 NumPy로 CPU에서 실행할 수 있다.
 
 ```sh
 git clone https://github.com/tongtongblueberry/krafton-ai-autonomy-hackathon.git
@@ -13,7 +13,7 @@ python -m pip install -r requirements.txt
 python examples/current_drift.py
 ```
 
-설치 없이 숫자부터 보려면 저장소 루트에서 `python examples/read_results.py robomimic --metric final_successes`를 실행하면 된다. 표와 그림은 로그인 없이 읽을 수 있다. 공개한 범위는 직접 작성한 구현, 합성 예제, 집계 결과다. [대회와 세 문제의 공식 소개](https://kraftonai-autonomy-hackathon.com/)
+두 로봇 조종 정책이 같은 출발점 50개에서 몇 번씩 성공했는지는 `python3 examples/read_results.py robomimic --metric final_successes`로 확인할 수 있다. 이 명령은 Python 표준 라이브러리만 사용한다.
 
 | 프로젝트에서 다룬 질문 | 여기서 볼 수 있는 것 |
 |---|---|
